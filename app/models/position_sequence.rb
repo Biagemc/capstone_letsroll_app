@@ -1,0 +1,2 @@
+class PositionSequence < ApplicationRecord
+end
