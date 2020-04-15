@@ -1,0 +1,4 @@
+{
+  id: comment.id,
+  content: comment.content,
+}

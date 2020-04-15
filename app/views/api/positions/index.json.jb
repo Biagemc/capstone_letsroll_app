@@ -1,0 +1,3 @@
+@positions.map do |position|
+  render partial: "index.json.jb", locals: { position: position }
+end

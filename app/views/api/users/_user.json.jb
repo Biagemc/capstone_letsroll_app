@@ -1,0 +1,10 @@
+{
+  id: user.id,
+  name: user.name,
+  city: user.city,
+  gym: user.gym,
+  afiliation: user.afiliation,
+  avatar: user.avatar,
+  roll_time: user.roll_time,
+  belt: user.belt,
+}

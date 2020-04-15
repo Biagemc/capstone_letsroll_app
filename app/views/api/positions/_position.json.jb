@@ -1,0 +1,7 @@
+{
+  id: position.id,
+  name: position.name,
+  url: position.url,
+  description: position.description,
+  type: position.situation,
+}
