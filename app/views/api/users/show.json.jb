@@ -1,1 +1,1 @@
-render partial: "show.json.jb", locals: { user: @user }
+render partial: "user.json.jb", locals: { user: @user }
