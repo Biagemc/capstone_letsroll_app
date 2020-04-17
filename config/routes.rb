@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     patch "/users/:id" => "users#update"
     delete "/users/:id" => "users#destroy"
 
+    post "/sessions" => "sessions#create"
+
     get "/comments" => "comments#index"
     post "/comments" => "comments#create"
     get "/comments/:id" => "comments#show"

@@ -1,6 +1,7 @@
 {
   id: user.id,
   name: user.name,
+  email: user.email,
   city: user.city,
   gym: user.gym,
   afiliation: user.afiliation,
