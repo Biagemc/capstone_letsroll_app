@@ -1,1 +1,1 @@
-render partial: "show.json.jb", locals: { comment: @comment }
+render partial: "comment.json.jb", locals: { comment: @comment }

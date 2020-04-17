@@ -4,11 +4,6 @@ class Api::UsersController < ApplicationController
     render "index.json.jb"
   end
 
-  def show
-    @user = User.find(params[:id])
-    render "show.json.jb"
-  end
-
   def create
     @user = User.new(
       name: params[:name],
@@ -25,6 +20,11 @@ class Api::UsersController < ApplicationController
     else
       render json: { errors: errors.full_messages }, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render "show.json.jb"
   end
 
   def update
