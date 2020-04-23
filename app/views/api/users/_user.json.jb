@@ -8,4 +8,5 @@
   avatar: user.avatar,
   roll_time: user.roll_time,
   belt: user.belt,
+  positions: user.positions,
 }

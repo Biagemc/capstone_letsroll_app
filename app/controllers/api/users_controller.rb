@@ -1,10 +1,5 @@
 class Api::UsersController < ApplicationController
-  # before_action :authenticate_user, only: [:create, :update, :destroy]
-
-  def index
-    @users = current_user
-    render "show.json.jb"
-  end
+  before_action :authenticate_user
 
   def create
     @user = User.new(
@@ -25,11 +20,6 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find(params[:id])
-    render "show.json.jb"
-  end
-
   def update
     @user = User.find(params[:id])
     @user.name = params[:name] || @user.name
@@ -45,7 +35,7 @@ class Api::UsersController < ApplicationController
     if @user.save
       render "show.json.jb"
     else
-      render json: { errors: errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: errors.full_messages }, status: :bad_request
     end
   end
 
