@@ -12,7 +12,9 @@ class Api::PositionsController < ApplicationController
       user_id: params[:user_id],
       situation: params[:situation],
     )
+
     if @position.save
+      @position.post = Post.new()
       render "show.json.jb"
     else
       render json: { errors: errors.full_messages }, status: :unprocessable_entity

@@ -1,7 +1,10 @@
 {
   id: position.id,
+  user_id: position.user_id,
   name: position.name,
   url: position.url,
   description: position.description,
   type: position.situation,
+  tags: position.tags,
+  discussion: position.post,
 }
