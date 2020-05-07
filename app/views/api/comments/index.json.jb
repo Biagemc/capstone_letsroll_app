@@ -1,3 +1,4 @@
 @comments.map do |comment|
   render partial: "comment.json.jb", locals: { comment: comment }
 end
+

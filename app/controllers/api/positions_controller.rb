@@ -1,7 +1,15 @@
 class Api::PositionsController < ApplicationController
   def index
-    @positions = Position.all
-    render "index.json.jb"
+    @positions = Position.where("name LIKE ?", "%#{params[:search]}%")
+    if params[:tag]
+      tag = params[:tag].split(",")
+      tags = Tag.where(id: tag)
+      @positions = tags.map { |value| value.positions }.flatten
+      render "index.json.jb"
+    else
+      @positions = Position.all.order(:name)
+      render "index.json.jb"
+    end
   end
 
   def create

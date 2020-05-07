@@ -6,5 +6,5 @@
   description: position.description,
   type: position.situation,
   tags: position.tags,
-  discussion: position.post,
+  discussion: position.post.comments,
 }
