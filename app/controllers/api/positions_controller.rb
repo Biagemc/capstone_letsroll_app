@@ -6,6 +6,9 @@ class Api::PositionsController < ApplicationController
       tags = Tag.where(id: tag)
       @positions = tags.map { |value| value.positions }.flatten
       render "index.json.jb"
+    elsif params[:type]
+      tag = params[:type]
+      @positions = Position.where("situation LIKE ?", "%#{params[:type]}%")
     else
       @positions = Position.all.order(:name)
       render "index.json.jb"
