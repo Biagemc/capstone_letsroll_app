@@ -1,4 +1,6 @@
 {
   id: comment.id,
+  post_id: comment.post_id,
   content: comment.content,
+  user: comment.user.name,
 }

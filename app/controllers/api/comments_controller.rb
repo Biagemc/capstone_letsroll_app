@@ -1,7 +1,13 @@
 class Api::CommentsController < ApplicationController
   def index
-    @comments = Comment.all
-    render "index.json.jb"
+    @comments = Comment.where("post_id == ?", "%#{params[:post]}%")
+    if params[:post]
+      @comments = Comment.find_by(params[:post_id])
+      render "index.json.jb"
+    else
+      @comments = Comment.all
+      render "index.json.jb"
+    end
   end
 
   def create

@@ -9,6 +9,7 @@ class Api::PositionsController < ApplicationController
     elsif params[:type]
       tag = params[:type]
       @positions = Position.where("situation LIKE ?", "%#{params[:type]}%")
+      render "index.json.jb"
     else
       @positions = Position.all.order(:name)
       render "index.json.jb"

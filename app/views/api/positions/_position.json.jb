@@ -6,5 +6,12 @@
   description: position.description,
   type: position.situation,
   tags: position.tags,
-  discussion: position.post.comments,
+  discussion: position.post.comments.map do |comment|
+    {
+      user_name: comment.user.name,
+      content: comment.content,
+      created_at: comment.created_at,
+    }
+  end,
+
 }
