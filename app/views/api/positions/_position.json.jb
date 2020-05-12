@@ -3,6 +3,7 @@
   user_id: position.user_id,
   name: position.name,
   url: position.url,
+  post: position.post.id,
   description: position.description,
   type: position.situation,
   tags: position.tags,
@@ -12,6 +13,7 @@
       id: comment.id,
       content: comment.content,
       created_at: comment.created_at,
+      user_id: comment.user_id,
     }
   end,
 
