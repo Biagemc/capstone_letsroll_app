@@ -26,8 +26,16 @@ class Api::PositionsController < ApplicationController
     )
 
     if @position.save
-      @position.post = Post.new()
-      render "show.json.jb"
+      @position.post = Post.create!(position_id: @position.id)
+      if params[:tag]
+        position_tags = params[:tag]
+        position_tags.each do |tag|
+          position_tag = PositionTag.create!(tag_id: tag, position_id: @position.id)
+        end
+      end
+      tag =
+
+        render "show.json.jb"
     else
       render json: { errors: errors.full_messages }, status: :unprocessable_entity
     end
@@ -47,6 +55,12 @@ class Api::PositionsController < ApplicationController
     @position.situation = params[:situation] || @position.situation
 
     if @position.save
+      old_tags = PositionTag.where(position_id: @position.id).destroy_all
+      tags = params[:tag].split(",")
+      tags.each do |tag|
+        position_tag = PositionTag.create!(tag_id: tag, position_id: @position.id)
+      end
+
       render "show.json.jb"
     else
       render json: { errors: errors.full_messages }, status: :unprocessable_entity
