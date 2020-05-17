@@ -3,4 +3,5 @@
   post_id: comment.post_id,
   content: comment.content,
   user: comment.user.name,
+  created_at: comment.friendly_created_at,
 }
