@@ -19,7 +19,7 @@ class Api::CommentsController < ApplicationController
     if @comment.save
       render "show.json.jb"
     else
-      render json: { errors: errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @comment.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -36,7 +36,7 @@ class Api::CommentsController < ApplicationController
     if @comment.save
       render "show.json.jb"
     else
-      render json: { errors: errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @comment.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

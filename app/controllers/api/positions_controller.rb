@@ -37,7 +37,7 @@ class Api::PositionsController < ApplicationController
 
         render "show.json.jb"
     else
-      render json: { errors: errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @position.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -63,7 +63,7 @@ class Api::PositionsController < ApplicationController
 
       render "show.json.jb"
     else
-      render json: { errors: errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @position.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
