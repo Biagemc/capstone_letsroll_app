@@ -9,4 +9,11 @@
   roll_time: user.roll_time,
   belt: user.belt,
   positions: user.positions,
+  favourites: user.favourites.map do |favourite|
+    {
+
+      position: favourite.position,
+
+    }
+  end,
 }

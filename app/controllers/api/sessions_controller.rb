@@ -12,9 +12,9 @@ class Api::SessionsController < ApplicationController
       )
       render json: { jwt: jwt,
                     name: user.name,
-                    user_id: user.id
- #  email: user.email,
-                             #  city: user.city,
+                    user_id: user.id,
+                    email: user.email
+ #  city: user.city,
                              #  gym: user.gym,
                              #  afiliation: user.afiliation,
                              #  avatar: user.avatar,

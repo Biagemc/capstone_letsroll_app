@@ -21,5 +21,8 @@ Rails.application.routes.draw do
     get "/comments/:id" => "comments#show"
     patch "/comments/:id" => "comments#update"
     delete "/comments/:id" => "comments#destroy"
+
+    post "/favourites" => "favourites#create"
+    delete "/favourites/:id" => "favourites#destroy"
   end
 end
