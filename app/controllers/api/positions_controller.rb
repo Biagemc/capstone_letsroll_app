@@ -7,15 +7,12 @@ class Api::PositionsController < ApplicationController
       @tags = Tag.where(id: tag_ids)
       @tags = @tags.map { |tag| tag.name }
       @positions = Position.joins(:tags).where(tags: { "name" => @tags }, situation: params[:type])
-      render "index.json.jb"
     elsif params[:tag]
       tag_ids = JSON.parse(params[:tag])
       tags = Tag.where(id: tag_ids)
       @positions = tags.map { |value| value.positions }.flatten
-      render "index.json.jb"
     elsif params[:type]
       @positions = Position.where(situation: params[:type])
-      render "index.json.jb"
     else
       @positions = Position.all.order(:name)
     end
