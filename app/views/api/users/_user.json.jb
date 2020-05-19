@@ -11,7 +11,7 @@
   positions: user.positions,
   favourites: user.favourites.map do |favourite|
     {
-
+      favourite_id: favourite.id,
       position: favourite.position,
 
     }

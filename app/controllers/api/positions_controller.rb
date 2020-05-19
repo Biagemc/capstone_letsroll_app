@@ -1,19 +1,25 @@
 class Api::PositionsController < ApplicationController
   def index
     @positions = Position.where("name LIKE ?", "%#{params[:search]}%")
-    if params[:tag]
-      tag = params[:tag].split(",")
-      tags = Tag.where(id: tag)
+    if params[:tag] && params[:type]
+      # binding.pry
+      tag_ids = JSON.parse(params[:tag])
+      @tags = Tag.where(id: tag_ids)
+      @tags = @tags.map { |tag| tag.name }
+      @positions = Position.joins(:tags).where(tags: { "name" => @tags }, situation: params[:type])
+      render "index.json.jb"
+    elsif params[:tag]
+      tag_ids = JSON.parse(params[:tag])
+      tags = Tag.where(id: tag_ids)
       @positions = tags.map { |value| value.positions }.flatten
       render "index.json.jb"
     elsif params[:type]
-      tag = params[:type]
-      @positions = Position.where("situation LIKE ?", "%#{params[:type]}%")
+      @positions = Position.where(situation: params[:type])
       render "index.json.jb"
     else
       @positions = Position.all.order(:name)
-      render "index.json.jb"
     end
+    render "index.json.jb"
   end
 
   def create
@@ -56,7 +62,7 @@ class Api::PositionsController < ApplicationController
 
     if @position.save
       old_tags = PositionTag.where(position_id: @position.id).destroy_all
-      tags = params[:tag].split(",")
+      tags = params[:tag]
       tags.each do |tag|
         position_tag = PositionTag.create!(tag_id: tag, position_id: @position.id)
       end
