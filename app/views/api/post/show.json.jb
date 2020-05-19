@@ -1,5 +1,0 @@
-# @comments.each do |comment|
-#   {
-#     name: comment.user.name,
-#   }
-# end

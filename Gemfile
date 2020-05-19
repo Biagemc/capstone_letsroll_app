@@ -43,4 +43,5 @@ gem 'http'
 gem 'rack-cors'
 gem 'jb'
 gem 'jwt'
-gem 'pry-rails', :group => :development
+# gem 'pry-rails', :group => :development
+gem 'seed_dump'

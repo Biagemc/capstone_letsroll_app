@@ -29,7 +29,7 @@ class Api::UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.name = params[:name] || @user.name
     @user.email = params[:email] || @user.email
-    # @user.password = params[:password] || @user.password_digest
+    @user.password = params[:password] || @user.password_digest
     @user.city = params[:city] || @user.city
     @user.gym = params[:gym] || @user.gym
     @user.afiliation = params[:afiliation] || @user.afiliation
