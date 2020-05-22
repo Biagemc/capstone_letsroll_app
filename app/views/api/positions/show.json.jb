@@ -5,6 +5,7 @@ render partial: "position.json.jb", locals: { position: @position }
   discussion: @position.post.comments.map do |comment|
     {
       user_name: comment.user.name,
+      user_avatar: comment.user.avatar,
       id: comment.id,
       content: comment.content,
       created_at: comment.friendly_created_at,
