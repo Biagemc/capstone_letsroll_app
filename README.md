@@ -1,5 +1,7 @@
 # README
 
+Front end was developed in this repository. https://github.com/Biagemc/capstone-letsroll-vue-app
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
