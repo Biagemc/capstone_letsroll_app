@@ -11,16 +11,9 @@ class Api::SessionsController < ApplicationController
         "HS256" # the encryption algorithm
       )
       render json: { jwt: jwt,
-                    name: user.name,
-                    user_id: user.id,
-                    email: user.email
- #  city: user.city,
-                             #  gym: user.gym,
-                             #  afiliation: user.afiliation,
-                             #  avatar: user.avatar,
-                             #  roll_time: user.roll_time,
-                             #  belt: user.belt
-                }, status: :created
+                     name: user.name,
+                     user_id: user.id,
+                     email: user.email }, status: :created
     else
       render json: {}, status: :unauthorized
     end

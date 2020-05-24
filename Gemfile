@@ -45,3 +45,5 @@ gem 'jb'
 gem 'jwt'
 # gem 'pry-rails', :group => :development
 gem 'seed_dump'
+
+# gem 'omniauth-google-oauth2', '~> 0.8.0'
