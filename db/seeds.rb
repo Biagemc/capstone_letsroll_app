@@ -1,9 +1,9 @@
 User.create!([
-  { name: "Augusto Maciel", email: "augusto@gmail.com", city: "Uberlandia", gym: "Ribeiro Jiu-Jitsu", afiliation: "Six Blades", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861837/letsRoll%20App/ribeiro-logo_sqlzvr.png", roll_time: nil, belt: "black", password_digest: "password" },
-  { name: "Fernando Reis", email: "fernando@gmail.com", city: "Sao Paolo", gym: "Aliance SP", afiliation: "Aliance", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861648/letsRoll%20App/aliance-logo_hzu065.png", roll_time: nil, belt: "black", password_digest: "password" },
-  { name: "Lucas Lepri", email: "lucas@gmail.com", city: "Atlanta", gym: "Lucas Lepri/Aliance", afiliation: "Alliance", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861737/letsRoll%20App/lucas-logo_mup2xf.png", roll_time: nil, belt: "black", password_digest: "password" },
-  { name: "Rodrigo Oliveira", email: "rodrigo@gmail.com", city: "Uberlandia", gym: "Atos Uberlandia", afiliation: "Atos", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861786/letsRoll%20App/atos-logo_oof2dm.png", roll_time: nil, belt: "black", password_digest: "password" },
-  { name: "Moreno Biage", email: "moreno@gmail.com", city: "Toronto", gym: "Salvosa - Scarborough", afiliation: "Ascencion", avatar: "https://res.cloudinary.com/daopqmnvp/image/upload/v1589646335/letsRoll%20App/salvosa-logo_fmomjg.png", roll_time: nil, belt: "Purple", password_digest: "password" },
+  { name: "Augusto Santos", email: "augusto@gmail.com", city: "Uberlandia", gym: "Ribeiro Jiu-Jitsu", afiliation: "Six Blades", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861837/letsRoll%20App/ribeiro-logo_sqlzvr.png", roll_time: nil, belt: "black", password: "password" },
+  { name: "John Fernando", email: "fernando@gmail.com", city: "Sao Paolo", gym: "Aliance SP", afiliation: "Aliance", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861648/letsRoll%20App/aliance-logo_hzu065.png", roll_time: nil, belt: "black", password: "password" },
+  { name: "Lucas Liason", email: "lucas@gmail.com", city: "Atlanta", gym: "Lucas Lepri/Aliance", afiliation: "Alliance", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861737/letsRoll%20App/lucas-logo_mup2xf.png", roll_time: nil, belt: "black", password: "password" },
+  { name: "Rodrigo Brick", email: "rodrigo@gmail.com", city: "Uberlandia", gym: "Atos Uberlandia", afiliation: "Atos", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861786/letsRoll%20App/atos-logo_oof2dm.png", roll_time: nil, belt: "black", password: "password" },
+  { name: "Moreno Biage", email: "moreno@gmail.com", city: "Toronto", gym: "Salvosa - Scarborough", afiliation: "Ascencion", avatar: "https://res.cloudinary.com/daopqmnvp/image/upload/v1589646335/letsRoll%20App/salvosa-logo_fmomjg.png", roll_time: nil, belt: "Purple", password: "password" },
 ])
 
 Position.create!([
@@ -86,19 +86,19 @@ Post.create!([
   { post: "Aliquam diam nibh, auctor sit amet odio vitae, eleifend feugiat nulla. Praesent ac laoreet eros. Nunc maximus mi sit amet libero feugiat rutrum. Suspendisse vel pulvinar velit, blandit molestie orci. Etiam risus libero, fringilla sed neque a, porta interdum nisi. Quisque eros urna, luctus sed interdum non, posuere tristique nisi. Sed vitae tempor velit. Fusce accumsan magna vitae accumsan posuere. Pellentesque blandit risus sed magna tempor, ut lacinia arcu faucibus", position_id: 22 },
   { post: "Aliquam diam nibh, auctor sit amet odio vitae, eleifend feugiat nulla. Praesent ac laoreet eros. Nunc maximus mi sit amet libero feugiat rutrum. Suspendisse vel pulvinar velit, blandit molestie orci. Etiam risus libero, fringilla sed neque a, porta interdum nisi. Quisque eros urna, luctus sed interdum non, posuere tristique nisi. Sed vitae tempor velit. Fusce accumsan magna vitae accumsan posuere. Pellentesque blandit risus sed magna tempor, ut lacinia arcu faucibus", position_id: 23 },
 ])
-Sequence.create!([
-  { name: "Takedown to open guard passing", position_id: 3, user_id: 2 },
-  { name: "Open guard passing and choking from side control", position_id: 4, user_id: 4 },
-  { name: "Drills to practice takedowns", position_id: 2, user_id: 3 },
-])
-PositionSequence.create!([
-  { position_id: 3, sequence_id: 2, rank: 1 },
-  { position_id: 6, sequence_id: 2, rank: 2 },
-  { position_id: 2, sequence_id: 1, rank: 1 },
-  { position_id: 3, sequence_id: 1, rank: 2 },
-  { position_id: 7, sequence_id: 3, rank: 1 },
-  { position_id: 2, sequence_id: 3, rank: 2 },
-])
+# Sequence.create!([
+#   { name: "Takedown to open guard passing", position_id: 3, user_id: 2 },
+#   { name: "Open guard passing and choking from side control", position_id: 4, user_id: 4 },
+#   { name: "Drills to practice takedowns", position_id: 2, user_id: 3 },
+# ])
+# PositionSequence.create!([
+#   { position_id: 3, sequence_id: 2, rank: 1 },
+#   { position_id: 6, sequence_id: 2, rank: 2 },
+#   { position_id: 2, sequence_id: 1, rank: 1 },
+#   { position_id: 3, sequence_id: 1, rank: 2 },
+#   { position_id: 7, sequence_id: 3, rank: 1 },
+#   { position_id: 2, sequence_id: 3, rank: 2 },
+# ])
 PositionTag.create!([
   { tag_id: 3, position_id: 1 },
   { tag_id: 14, position_id: 1 },
@@ -144,4 +144,28 @@ Comment.create!([
   { content: "Thanks for sharing", user_id: 5, post_id: 1 },
   { content: "Do you have other videos on this?", user_id: 2, post_id: 1 },
   { content: "Cool. Osss!!!", user_id: 3, post_id: 3 },
+])
+
+Comment.create!([
+  { content: "This is a great position", user_id: 3, post_id: 2 },
+  { content: "I practiced this one last week.", user_id: 4, post_id: 2 },
+  { content: "Thanks for sharing", user_id: 5, post_id: 2 },
+  { content: "Do you have other videos on this?", user_id: 2, post_id: 2 },
+  { content: "Cool. Osss!!!", user_id: 3, post_id: 2 },
+])
+
+Comment.create!([
+  { content: "This is a great position", user_id: 3, post_id: 4 },
+  { content: "I practiced this one last week.", user_id: 4, post_id: 4 },
+  { content: "Thanks for sharing", user_id: 5, post_id: 4 },
+  { content: "Do you have other videos on this?", user_id: 2, post_id: 4 },
+  { content: "Cool. Osss!!!", user_id: 3, post_id: 4 },
+])
+
+Comment.create!([
+  { content: "This is a great position", user_id: 3, post_id: 5 },
+  { content: "I practiced this one last week.", user_id: 4, post_id: 5 },
+  { content: "Thanks for sharing", user_id: 5, post_id: 5 },
+  { content: "Do you have other videos on this?", user_id: 2, post_id: 5 },
+  { content: "Cool. Osss!!!", user_id: 3, post_id: 5 },
 ])
