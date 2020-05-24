@@ -2,6 +2,7 @@ render partial: "position.json.jb", locals: { position: @position }
 {
   position: @position,
   post: @position.post.id,
+  tags: @position.tags,
   discussion: @position.post.comments.map do |comment|
     {
       user_name: comment.user.name,
