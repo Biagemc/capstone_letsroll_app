@@ -1,9 +1,9 @@
 User.create!([
-  { name: "Augusto Santos", email: "augusto@gmail.com", city: "Uberlandia", gym: "Ribeiro Jiu-Jitsu", afiliation: "Six Blades", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861837/letsRoll%20App/ribeiro-logo_sqlzvr.png", roll_time: nil, belt: "black", password: "password" },
-  { name: "John Fernando", email: "fernando@gmail.com", city: "Sao Paolo", gym: "Aliance SP", afiliation: "Aliance", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861648/letsRoll%20App/aliance-logo_hzu065.png", roll_time: nil, belt: "black", password: "password" },
-  { name: "Lucas Liason", email: "lucas@gmail.com", city: "Atlanta", gym: "Lucas Lepri/Aliance", afiliation: "Alliance", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861737/letsRoll%20App/lucas-logo_mup2xf.png", roll_time: nil, belt: "black", password: "password" },
-  { name: "Rodrigo Brick", email: "rodrigo@gmail.com", city: "Uberlandia", gym: "Atos Uberlandia", afiliation: "Atos", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861786/letsRoll%20App/atos-logo_oof2dm.png", roll_time: nil, belt: "black", password: "password" },
-  { name: "Moreno Biage", email: "moreno@gmail.com", city: "Toronto", gym: "Salvosa - Scarborough", afiliation: "Ascencion", avatar: "https://res.cloudinary.com/daopqmnvp/image/upload/v1589646335/letsRoll%20App/salvosa-logo_fmomjg.png", roll_time: nil, belt: "Purple", password: "password" },
+  { name: "Augusto Santos", email: "augusto@gmail.com", city: "Uberlandia", gym: "Ribeiro Jiu-Jitsu", afiliation: "Six Blades", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861837/letsRoll%20App/ribeiro-logo_sqlzvr.png", belt: "black", password: "password" },
+  { name: "John Fernando", email: "fernando@gmail.com", city: "Sao Paolo", gym: "Aliance SP", afiliation: "Aliance", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861648/letsRoll%20App/aliance-logo_hzu065.png", belt: "black", password: "password" },
+  { name: "Lucas Liason", email: "lucas@gmail.com", city: "Atlanta", gym: "Lucas Lepri/Aliance", afiliation: "Alliance", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861737/letsRoll%20App/lucas-logo_mup2xf.png", belt: "black", password: "password" },
+  { name: "Rodrigo Brick", email: "rodrigo@gmail.com", city: "Uberlandia", gym: "Atos Uberlandia", afiliation: "Atos", avatar: "https://res.cloudinary.com/biagemc/image/upload/v1589861786/letsRoll%20App/atos-logo_oof2dm.png", belt: "black", password: "password" },
+  { name: "Moreno Biage", email: "moreno@gmail.com", city: "Toronto", gym: "Salvosa - Scarborough", afiliation: "Ascencion", avatar: "https://res.cloudinary.com/daopqmnvp/image/upload/v1589646335/letsRoll%20App/salvosa-logo_fmomjg.png", belt: "Purple", password: "password" },
 ])
 
 Position.create!([
