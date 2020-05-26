@@ -4,4 +4,4 @@ Web app for practitioners of Brazilian Jiu-jitsu. Contains a library of Brazilia
 
 Front end was developed in this repository. https://github.com/Biagemc/capstone-letsroll-vue-app
 
-Live Link: https://blooming-river-36615.herokuapp.com/
+Live Link: https://bjjletsroll.herokuapp.com/
