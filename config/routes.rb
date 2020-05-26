@@ -24,5 +24,8 @@ Rails.application.routes.draw do
 
     post "/favourites" => "favourites#create"
     delete "/favourites/:id" => "favourites#destroy"
+
+    # match "/api/positions", to: redirect("/"), via: :all
+    # match "*path", to: "application#custom_action", via: :all
   end
 end
