@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web app for practitioners of Brazilian Jiu-jitsu. Contains a library of Brazilian Jiu-jitsu lessons (positions) where you can create, and post lessons and users can comment on them for interaction and questions. Also, user has its own profile, can upload avatar picure and select and save to their favourites positions. This app was created using Ruby on Rails for backend, Vue.JS for frontend, CSS and Bootstrap for styling. 
 
-Things you may want to cover:
+Front end was developed in this repository. https://github.com/Biagemc/capstone-letsroll-vue-app
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Live Link: https://bjjletsroll.herokuapp.com/
